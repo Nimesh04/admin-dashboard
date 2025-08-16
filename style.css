@@ -11,7 +11,7 @@
 
 body{
     font-family:var(--font-family);
-    background-color: grey;
+    background-color: rgb(212, 212, 212);
 }
 
 img{
@@ -32,7 +32,7 @@ img{
     background-color: #2281b7;
     color: white;
     display: grid;
-    grid-template-rows: 60px 300px 140px;
+    grid-template-rows: 60px 370px 140px;
     gap: 60px;
     padding: 30px;
 }
@@ -40,6 +40,35 @@ img{
 .nav-section > div{
     display: grid;
     gap: 20px;
+}
+
+
+.nav-item{
+    display:grid;
+    grid-template-columns: repeat(2, 50px);
+    gap: 8px;
+    justify-items: start;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.nav-item > svg{
+    width: 40px;
+    height: 40px;
+    fill: white;
+}
+
+.heading-section{
+    display:grid;
+    grid-template-columns: repeat(2, 50px);
+    gap: 8px;
+    justify-items: start;
+    align-items: center;
+}
+.heading-section > svg{
+    width: 50px;
+    height: 50px;
+    fill: white;
 }
 
 .header{
@@ -133,14 +162,62 @@ img{
 .project-container{
     grid-column: 2/3;
     grid-row:2/4;
+    padding: 20px;
+}
+
+.project-container > h2, .announcements > h2, .trending > h2{
+    margin-bottom: 15px;
+}
+.project-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.content-child{ 
+    background-color: white;
+    border-radius: 12px;
+    height: 230px;
+    padding: 20px;
+    border-left: 13px solid orange;
 }
 
 .announcements{
     grid-column: 3/4;
     grid-row: 2/3;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.announce-items{
+    padding: 12px;
+    border-bottom: 2px solid lightgrey;
+}
+
+.announce-items:last-child{
+    border-bottom: none;
+}
+
+
+.announcements > div, .trending > div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .trending{
     grid-column:3/4;
     grid-row: 3/4;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+.trending-items{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    align-items: center;
+    justify-items: center;
+    padding: 12px;
 }
